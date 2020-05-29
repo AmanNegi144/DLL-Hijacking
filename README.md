@@ -19,7 +19,10 @@ So, if we somehow place our malicious .dll file in this folder we can execute ou
 Part TWO: Using appropriate method to tricking user to create the malicious .dll file in the VLC default folder
 I have chosen macro malware that is embedded inside a .doc file. As people are less cautious before opening a doc file.
 I have hidden the hex code of the malicious dll in the comment section of the doc file.
+
+
 ![Image of hidden code](https://github.com/AmanNegi144/DLL-Hijacking/blob/master/Images/Hexcode_in_comments.png)
+
 
 As you can see in the above figure the hidden code, its size is 5 KB.
 The conversion of above hex code into a .dll file is done by the macro code shown below
@@ -29,6 +32,9 @@ The malicious file on execution only open a calc.exe file to show the proof of c
 
 PART THREE: Execution of the malware
 On clicking the doc file, the WININET.dll file is created in the VLC directory. Check out the last file in the  figure.
- ![Image of dll generation](https://github.com/AmanNegi144/DLL-Hijacking/blob/master/Images/DLL_generation.png)
-On execution of the VLC media player the both player and the cacl.exe file are executed.
+
+
+![Image of dll generation](https://github.com/AmanNegi144/DLL-Hijacking/blob/master/Images/DLL_generation.png)
+ 
+On execution of the VLC media player,both vlc media player and cacl.exe are executed.
 ![Image of calc execution](https://github.com/AmanNegi144/DLL-Hijacking/blob/master/Images/Execution_of_Calc.png)
