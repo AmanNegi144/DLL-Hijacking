@@ -25,7 +25,10 @@ I have hidden the hex code of the malicious dll in the comment section of the do
 
 
 As you can see in the above figure the hidden code, its size is 5 KB.
-The conversion of above hex code into a .dll file is done by the macro code shown below
+The conversion of above hex code into a .dll file is done by the macro code shown below.
+
+![Image of macro code](https://github.com/AmanNegi144/DLL-Hijacking/blob/master/Images/Macro_Code.png)
+
  
 It takes each byte of hex code in the comment section and write it into a file Name WININET.dll.
 The malicious file on execution only open a calc.exe file to show the proof of concept.
