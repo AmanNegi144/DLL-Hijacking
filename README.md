@@ -13,7 +13,7 @@ Windows has something called ‘Environment Variables’. These are crucial path
 
 Part ONE: To find a dll hijacking vulnerable application and analysis the optimal dll.
 In my project I have use VLC media player to target the WININET.dll that is called by the VLC media player whenever it I executed. As you can see in the below figure the WININET.dll is first searched in the current working folder where it is not found.
-![Image of procmon](https://github.com/AmanNegi144/DLL-Hijacking/Images/procmon.png)
+![Image of procmon](https://github.com/AmanNegi144/DLL-Hijacking/blob/master/Images/procmon.png)
 
  
 
