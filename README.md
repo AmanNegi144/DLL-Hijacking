@@ -1,5 +1,4 @@
 # DLL-Hijacking
-DLL Hijacking
 DLL Hijacking is a way for attackers to execute unexpected code on your machine. It means if an attacker tricks you into getting a file on your system (by social engineering, etc.)  that file could be executed when the user runs an application that is vulnerable to DLL Hijacking. To understand how it works, you must first understand two important concepts:
 1.	What is a DLL
 2.	What is the PATH variable in Windows?
