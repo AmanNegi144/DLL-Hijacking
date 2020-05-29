@@ -14,16 +14,13 @@ Windows has something called ‘Environment Variables’. These are crucial path
 Part ONE: To find a dll hijacking vulnerable application and analysis the optimal dll.
 In my project I have use VLC media player to target the WININET.dll that is called by the VLC media player whenever it I executed. As you can see in the below figure the WININET.dll is first searched in the current working folder where it is not found.
 ![Image of procmon](https://github.com/AmanNegi144/DLL-Hijacking/blob/master/Images/procmon.png)
-
- 
-
 So, if we somehow place our malicious .dll file in this folder we can execute our file.
 
 Part TWO: Using appropriate method to tricking user to create the malicious .dll file in the VLC default folder
-
 I have chosen macro malware that is embedded inside a .doc file. As people are less cautious before opening a doc file.
 I have hidden the hex code of the malicious dll in the comment section of the doc file.
- 
+![Image of hidden code](https://github.com/AmanNegi144/DLL-Hijacking/blob/master/Images/Hexcode_in_comments.png)
+
 As you can see in the above figure the hidden code, its size is 5 KB.
 The conversion of above hex code into a .dll file is done by the macro code shown below
  
@@ -31,13 +28,7 @@ It takes each byte of hex code in the comment section and write it into a file N
 The malicious file on execution only open a calc.exe file to show the proof of concept.
 
 PART THREE: Execution of the malware
-
 On clicking the doc file, the WININET.dll file is created in the VLC directory. Check out the last file in the  figure.
- 
+ ![Image of dll generation](https://github.com/AmanNegi144/DLL-Hijacking/blob/master/Images/DLL_generation.png)
 On execution of the VLC media player the both player and the cacl.exe file are executed.
-
- 
-
- 
-
-
+![Image of calc execution](https://github.com/AmanNegi144/DLL-Hijacking/blob/master/Images/Execution_of_Calc.png)
